@@ -1,0 +1,15 @@
+.conatiner{
+    width: 100%;
+    padding: 40px 5%;
+    background: whitesmoke;
+}
+.conatiner .card-container{
+    width: 100%;
+    padding: 330px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5em;
+}

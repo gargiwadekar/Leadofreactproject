@@ -1,0 +1,136 @@
+.container{
+    width: 100%;
+    padding: 20px 5%;
+    border: 1px solid #ccc;
+    background: whitesmoke;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 2em;
+}
+.container .form-container{
+    width: 50%;
+}
+.container .form-container h2{
+  margin-bottom: 40px;
+}
+.container .form-container form{
+    width: 350px;
+}
+.container .form-container form .input-field{
+    width: 100%;
+    border: 2px solid silver;
+    padding: 10px 5%;
+}
+.container .form-container .input-field label{
+  font-size: 14px;
+  font-weight: 520;
+}
+.form-container .input-field .input-with-icon{
+  width: 100%;
+  margin-top: 5px;
+  border: 2px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+.form-container .input-field .input-with-icon i{
+  width: 10%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  background: transparent;
+  color: silver;
+  transition: all 0.3s ease;
+}
+.form-container .input-field .input-with-icon input{
+  width: 90%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.form-container .input-field .input-with-icon:focus-within{
+  border: 2px solid #000;
+ 
+}
+.form-container .input-field .input-with-icon:focus-within i{
+  color: #000;
+}
+.form-container .action-field{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1.5em;
+}
+.form-container .action-field button{
+  width: 50%;
+  padding: 10px;
+  font-weight: 520;
+  color: #fff;
+  background: #000;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-container .action-field button:first-child{
+  background:  linear-gradient(green);
+  border: 2px solid green;
+  color: white;
+}
+.form-container .action-field button:last-child{
+  background: linear-gradient(orangered); 
+  border: 2px solid red;
+  color: white;
+}
+.form-container .action-field button:hover{
+  transform: scale(0.98);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.container .table-container{
+  width: 50%;
+
+}
+.container .table-container h2{
+  margin-bottom: 40px;
+}
+.container .table-container table{
+  width: 450px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+.container .table-container table thead{
+  width: 100%;
+  background: silver;
+}
+.container .table-container table thead th{
+  padding: 10px;
+}
+.container .table-container table tbody tr{
+  border-bottom: 1px solid silver;
+
+}
+.container .table-container table td{
+  padding: 10px;
+  text-align: center;
+}
+.table-container table td i{
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.table-container table td i:hover{
+  color: darkred; 
+  transform: scale(1.2);
+}

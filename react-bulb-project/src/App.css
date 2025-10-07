@@ -1,0 +1,50 @@
+/* App styles for bulb on/off project */
+:root{
+  --bg-off: #000000;
+  --bg-on: #e9e9eb; /* soft grey when on */
+  --button-bg: #222;
+  --button-on-bg: #fff;
+  --button-text-on: #111;
+  --button-text-off: #fff;
+  --halo: rgba(255, 214, 76, 0.14);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* App container */
+.app{height:100vh; width:100%; display:flex; align-items:center; justify-content:center; transition:background 400ms ease}
+.app.off{background:var(--bg-off); color:#fff}
+.app.on{background:var(--bg-on); color:#111}
+
+.center{display:flex; flex-direction:column; gap:28px; align-items:center}
+
+/* Logo wrapper */
+.logo-wrap{position:relative; width:160px; height:160px; display:flex; align-items:center; justify-content:center}
+.icon{display:block; font-size:8rem; line-height:1; transition:transform 420ms ease, opacity 320ms ease, color 320ms ease}
+.icon-on{color:#FFD54F; transform:scale(1)}
+.icon-off{color:#bdbdbd; transform:scale(1)}
+
+/* Halo/glow behind the bulb when on */
+.halo{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:200px; height:200px; border-radius:50%; pointer-events:none; transition:opacity 420ms ease, transform 420ms ease; opacity:0; filter:blur(18px);}
+.halo.visible{opacity:1; transform:translate(-50%,-50%) scale(1); background: radial-gradient(circle at 50% 40%, rgba(255,214,76,0.35) 0%, rgba(255,214,76,0.14) 20%, rgba(255,214,76,0.04) 40%, transparent 60%)}
+
+/* Toggle button */
+.toggle{appearance:none; border:0; padding:12px 26px; border-radius:999px; cursor:pointer; font-weight:600; letter-spacing:0.2px; transition:all 260ms ease, transform 120ms ease; box-shadow:0 6px 18px rgba(0,0,0,0.25)}
+.app.off .toggle{background:var(--button-bg); color:var(--button-text-off)}
+.app.on .toggle{background:var(--button-on-bg); color:var(--button-text-on); box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.toggle:active{transform:translateY(1px) scale(0.997)}
+
+@media (max-width:420px){
+  .logo-wrap{width:120px;height:120px}
+  .halo{width:160px;height:160px}
+}
+
+/* utility kept for compatibility - maps to container concept from original file */
+.constrain-light{width:100%;height:100vh;display:flex;justify-content:center;align-items:center}

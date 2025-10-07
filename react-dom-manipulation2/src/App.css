@@ -1,0 +1,82 @@
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;           
+  padding: 36px 16px;
+  min-height: 100vh;
+  background: white;
+  box-sizing: border-box;
+}
+
+
+.box {
+  width: 600px;               
+  max-width: 92%;
+  height: 80px;              
+  box-sizing: border-box;
+  border: 2px solid rgb(240, 120, 7);
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;       
+  justify-content: flex-start;
+  gap: 12px;
+  box-shadow: 0 0 3px ;
+}
+
+.btn {
+  width: 25%;
+  height: 11.7vh;
+  padding: 8px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid rgb(231, 142, 8);
+  border-radius: 6px;
+  background: white;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+  .btn:hover, .btn:focus {
+    background: #1aff00;
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(62, 245, 37, 0.3);
+  }
+
+  .btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 8px rgba(62, 245, 37, 0.2);
+  }
+
+
+.para {
+  margin: 30px;
+  flex: 1;                  
+  display: flex;
+  align-items: center;        
+}
+
+
+.box1 .para {
+  justify-content: flex-end; 
+  text-align: right;
+  margin: 50px;
+  font-size: large;
+}
+
+
+.box2 .para {
+  justify-content: flex-start; 
+  text-align: left;
+  font-weight: 400;    
+   margin: 50px;  
+   font-size: large;     
+}
+
+
+@media (max-width: 420px) {
+  .box { height: auto; padding: 12px; gap: 8px; flex-wrap: nowrap; }
+  .btn { min-width: 64px; }
+  .para { font-size: 17px; }
+}
